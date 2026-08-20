@@ -1,0 +1,26 @@
+{
+  "scheme_id": "ignoaps",
+  "scheme_name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
+  "category": "pension",
+  "jurisdiction": "central",
+  "predicate": {
+    "operator": "AND",
+    "conditions": [
+      { "field": "age", "op": ">=", "value": 60 },
+      { "field": "annual_income_band", "op": "in", "value": ["below_100000"] }
+    ]
+  },
+  "benefit_description": "Monthly pension to destitute elderly persons belonging to BPL households.",
+  "benefit_amount": "₹200–₹500/month (central share) + state top-up",
+  "required_documents": [
+    "Aadhaar card copy",
+    "Age proof (Birth certificate / School leaving certificate)",
+    "BPL ration card",
+    "Bank passbook copy",
+    "Self-declaration form"
+  ],
+  "application_authority": "District Social Welfare Office / Gram Panchayat",
+  "source_document_url": "https://nsap.nic.in/Guidelines/NSAP_guidelines2014.pdf",
+  "last_verified_date": "2024-03-01",
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,118 @@
+/* ============================================================
+   EntitleMap — Neo Kinpaku Design Tokens
+   Source: DESIGN.md (Impeccable design system)
+   OKLCH color space throughout. Do not hand-type raw values.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;300;400;600&family=Albert+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ── Brand Anchors ── */
+  --kinpaku-gold:       oklch(84% 0.19 80.46);
+  --verdigris-patina:   oklch(70% 0.12 188);
+  --dark-ink:           oklch(14% 0.018 95);
+
+  /* ── Surfaces ── */
+  --lacquer-black:      oklch(7% 0.006 95);
+  --lacquer-deep:       oklch(4% 0.004 95);
+  --raised-lacquer:     oklch(11% 0.006 95);
+  --graphite:           oklch(15% 0.008 95);
+  --graphite-2:         oklch(19% 0.008 95);
+
+  /* ── Text ── */
+  --champagne:          oklch(91% 0 0);
+  --text-warm:          oklch(88% 0 0);
+  --text-muted:         oklch(72% 0 0);
+  --text-faint:         oklch(62% 0 0);
+  --text-mute-deep:     oklch(52% 0 0);
+
+  /* ── Gold Ramp ── */
+  --kinpaku-pale:       oklch(86% 0.07 84);
+  --kinpaku-rich:       oklch(77% 0.13 82);
+  --kinpaku-deep:       oklch(61% 0.085 78);
+  --kinpaku-rule:       oklch(78% 0.12 82);
+  --kinpaku-glint:      oklch(95% 0.04 84);
+  --gold-hairline:      oklch(78% 0 0 / 0.16);
+  --gold-hairline-strong: oklch(74% 0.09 82 / 0.6);
+
+  /* ── Patina Ramp ── */
+  --patina-pale:        oklch(82% 0.07 188);
+  --patina-deep:        oklch(49% 0.08 188);
+  --patina-rule:        oklch(70% 0.105 190);
+  --patina-text:        oklch(76% 0.088 190);
+
+  /* ── State ── */
+  --vermilion-warning:  oklch(58% 0.15 35);
+  --success:            oklch(45% 0.18 145);
+  --success-soft:       oklch(95% 0.05 145);
+  --success-border:     oklch(75% 0.12 145);
+
+  /* ── Typography ── */
+  --font-display:   'Alumni Sans', 'Albert Sans', Arial, sans-serif;
+  --font-body:      'Albert Sans', 'Avenir Next', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-mono:      'SFMono-Regular', 'Roboto Mono', Consolas, monospace;
+
+  /* ── Type Scale ── */
+  --type-8:   0.5rem;
+  --type-10:  0.625rem;
+  --type-11:  0.6875rem;
+  --type-12:  0.75rem;
+  --type-13:  0.8125rem;
+  --type-14:  0.875rem;
+  --type-16:  1rem;
+  --type-18:  1.125rem;
+  --type-20:  1.25rem;
+  --type-24:  1.5rem;
+  --type-28:  1.75rem;
+  --type-32:  2rem;
+  --type-40:  2.5rem;
+  --type-48:  3rem;
+  --type-display: clamp(3.4rem, 6.5vw, 5.6rem);
+  --type-headline: clamp(2.6rem, 4vw, 3.4rem);
+
+  /* ── Spacing ── */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  32px;
+  --space-xl:  48px;
+  --space-2xl: 80px;
+  --space-3xl: 112px;
+
+  /* ── Radius ── */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+  --radius-pill: 999px;
+
+  /* ── Motion ── */
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* ── Component Tokens ── */
+  --btn-primary-bg:    var(--kinpaku-gold);
+  --btn-primary-text:  var(--dark-ink);
+  --btn-primary-hover: var(--kinpaku-pale);
+  --btn-secondary-text: var(--kinpaku-gold);
+  --btn-secondary-border: var(--gold-hairline-strong);
+
+  --card-bg:     var(--raised-lacquer);
+  --card-border: var(--gold-hairline);
+  --card-text:   var(--text-warm);
+
+  --input-bg:     var(--lacquer-deep);
+  --input-text:   var(--champagne);
+  --input-border: var(--gold-hairline);
+
+  /* ── Shadows ── */
+  --shadow-panel: 0 24px 70px oklch(2% 0.004 95 / 0.42);
+  --shadow-cta:   0 18px 48px oklch(2% 0.004 95 / 0.4);
+  --shadow-glow:  0 0 22px oklch(70% 0.105 190 / 0.24);
+  --shadow-gold:  0 0 32px oklch(84% 0.19 80.46 / 0.2);
+}

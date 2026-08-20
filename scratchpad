@@ -1,0 +1,14 @@
+# Verification Plan
+
+- [x] Check browser console for errors -> Found compilation error in SchemeCard.tsx.
+- [ ] Take screenshot of Hero section (top) -> Failed (Blank page due to compilation error)
+- [ ] Scroll to and take screenshot of Problem section -> Failed
+- [ ] Scroll to and take screenshot of HowItWorks section -> Failed
+- [ ] Scroll to and take screenshot of SchemeCategories section -> Failed
+- [ ] Scroll to Demo section -> Failed
+- [ ] Click "Start Demo", wait 5s, take screenshot of conversation starting -> Failed
+- [x] Report rendering styles and section descriptions -> Failed to render
+
+## Details of compilation error:
+`SyntaxError: The requested module '/src/data/mock_schemes.ts' does not provide an export named 'MockScheme'`
+This is caused by an import of `MockScheme` from `/src/data/mock_schemes.ts` inside `SchemeCard.tsx` that is not exported.

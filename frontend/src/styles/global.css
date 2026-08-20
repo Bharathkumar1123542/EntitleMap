@@ -1,0 +1,218 @@
+/* ============================================================
+   EntitleMap — Global CSS
+   Imports tokens, resets, and base typography.
+   ============================================================ */
+
+@import './tokens.css';
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--lacquer-black);
+  color: var(--text-warm);
+  font-family: var(--font-body);
+  font-size: var(--type-16);
+  font-weight: 400;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Typography Defaults ── */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--type-display);
+  font-weight: 100;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--champagne);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-headline);
+  font-weight: 300;
+  line-height: 1.04;
+  color: var(--champagne);
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: var(--type-18);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--champagne);
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-size: var(--type-16);
+  font-weight: 500;
+  color: var(--champagne);
+}
+
+p {
+  max-width: 70ch;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--kinpaku-gold);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+}
+
+a:hover {
+  color: var(--kinpaku-pale);
+}
+
+strong {
+  color: var(--champagne);
+  font-weight: 600;
+}
+
+/* ── Monospace ── */
+code, pre {
+  font-family: var(--font-mono);
+  font-size: var(--type-12);
+  letter-spacing: 0.04em;
+}
+
+/* ── Hairlines / Dividers ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--gold-hairline);
+  margin: var(--space-xl) 0;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: oklch(84% 0.19 80.46 / 0.25);
+  color: var(--champagne);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--lacquer-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--graphite-2);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kinpaku-deep);
+}
+
+/* ── Layout Helpers ── */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section-sm {
+  padding: var(--space-2xl) 0;
+}
+
+/* ── Eyebrow Label ── */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--type-11);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--patina-text);
+}
+
+/* ── Gold Seam / Accent Line ── */
+.gold-seam {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--kinpaku-rule) 30%,
+    var(--kinpaku-gold) 50%,
+    var(--kinpaku-rule) 70%,
+    transparent 100%
+  );
+  width: 100%;
+}
+
+/* ── Gradient Text ── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--kinpaku-gold), var(--kinpaku-pale));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-patina-gradient {
+  background: linear-gradient(135deg, var(--verdigris-patina), var(--patina-pale));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid var(--verdigris-patina);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Root App ── */
+#root {
+  isolation: isolate;
+}
+
+/* ── Shimmer Animation (for skeleton loaders) ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Gold pulse glow ── */
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(84% 0.19 80.46 / 0); }
+  50%       { box-shadow: 0 0 24px 6px oklch(84% 0.19 80.46 / 0.18); }
+}
+
+/* ── Patina live dot ── */
+@keyframes patina-breathe {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ── Fade-in-up ── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up var(--duration-slow) var(--ease-out) both;
+}
